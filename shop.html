@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Sweatpants & Shorts | UrbanFlex Wear Kenya</title>
+    <meta name="description" content="Browse our complete collection of sweatpants and sweat shorts. Filter by category, size, and price. Fast delivery in Kenya.">
+    <meta name="keywords" content="buy sweatpants Kenya, sweat shorts shop, streetwear collection, affordable clothing Kenya">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="canonical" href="https://urbanflexwear.com/shop">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="navbar">
+            <a href="index.html" class="logo">Urban<span>Flex</span> Wear</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="shop.html?category=sweatpants">Sweatpants</a></li>
+                <li><a href="shop.html?category=shorts">Sweat Shorts</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="search" placeholder="Search products..." aria-label="Search products">
+            </div>
+            
+            <div class="nav-icons">
+                <div class="nav-icon cart-icon" title="Shopping Cart">
+                    🛒
+                    <span class="nav-badge" style="display: none;">0</span>
+                </div>
+                <div class="nav-icon">❤️</div>
+                <div class="nav-icon">👤</div>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Header -->
+    <section style="background-color: var(--light-grey); padding: 40px 0; text-align: center;">
+        <div class="container">
+            <h1>Shop Our Collection</h1>
+            <p style="margin-top: 10px; color: var(--medium-grey);">Discover premium sweatpants and shorts with fast Nairobi delivery</p>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 200px 1fr; gap: 30px;">
+                <!-- Filters Sidebar -->
+                <aside style="background-color: var(--light-grey); padding: 20px; border-radius: 12px; height: fit-content; position: sticky; top: 80px;">
+                    <h3 style="margin-bottom: 20px;">Filters</h3>
+
+                    <!-- Category Filter -->
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="font-size: 0.95rem; margin-bottom: 12px;">Category</h4>
+                        <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+                            <input type="radio" name="category" value="all" checked> 
+                            <span style="margin-left: 8px;">All Products</span>
+                        </label>
+                        <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+                            <input type="radio" name="category" value="sweatpants"> 
+                            <span style="margin-left: 8px;">Sweatpants</span>
+                        </label>
+                        <label style="display: flex; cursor: pointer;">
+                            <input type="radio" name="category" value="shorts"> 
+                            <span style="margin-left: 8px;">Sweat Shorts</span>
+                        </label>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="font-size: 0.95rem; margin-bottom: 12px;">Price Range</h4>
+                        <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+                            <input type="checkbox" name="price" value="300-399"> 
+                            <span style="margin-left: 8px;">KSh 300 - 399</span>
+                        </label>
+                        <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+                            <input type="checkbox" name="price" value="400-499"> 
+                            <span style="margin-left: 8px;">KSh 400 - 499</span>
+                        </label>
+                        <label style="display: flex; cursor: pointer;">
+                            <input type="checkbox" name="price" value="500+"> 
+                            <span style="margin-left: 8px;">KSh 500+</span>
+                        </label>
+                    </div>
+
+                    <!-- Size Filter -->
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="font-size: 0.95rem; margin-bottom: 12px;">Size</h4>
+                        <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+                            <input type="checkbox" name="size" value="S"> 
+                            <span style="margin-left: 8px;">Small (S)</span>
+                        </label>
+                        <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+                            <input type="checkbox" name="size" value="M"> 
+                            <span style="margin-left: 8px;">Medium (M)</span>
+                        </label>
+                        <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+                            <input type="checkbox" name="size" value="L"> 
+                            <span style="margin-left: 8px;">Large (L)</span>
+                        </label>
+                        <label style="display: flex; cursor: pointer;">
+                            <input type="checkbox" name="size" value="XL"> 
+                            <span style="margin-left: 8px;">Extra Large (XL)</span>
+                        </label>
+                    </div>
+
+                    <!-- Stock Filter -->
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="font-size: 0.95rem; margin-bottom: 12px;">Stock Status</h4>
+                        <label style="display: flex; cursor: pointer;">
+                            <input type="checkbox" name="stock" value="in-stock" checked> 
+                            <span style="margin-left: 8px;">In Stock Only</span>
+                        </label>
+                    </div>
+
+                    <!-- Discount Filter -->
+                    <div>
+                        <h4 style="font-size: 0.95rem; margin-bottom: 12px;">On Sale</h4>
+                        <label style="display: flex; cursor: pointer;">
+                            <input type="checkbox" name="discount" value="on-sale"> 
+                            <span style="margin-left: 8px;">Discounted Items</span>
+                        </label>
+                    </div>
+
+                    <button onclick="resetFilters()" class="btn btn-secondary btn-small" style="width: 100%; margin-top: 20px;">Reset Filters</button>
+                </aside>
+
+                <!-- Products Grid -->
+                <div>
+                    <!-- Sort Options -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+                        <div>
+                            <p id="product-count" style="color: var(--medium-grey);">Showing all products</p>
+                        </div>
+                        <div>
+                            <label style="margin-right: 10px;">Sort by:</label>
+                            <select onchange="sortProducts(this.value)" style="padding: 8px 12px; border: 1px solid var(--dark-grey); border-radius: 6px;">
+                                <option value="newest">Newest</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="rating">Top Rated</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Products Display -->
+                    <div id="products-grid" class="grid grid-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section" style="background-color: var(--light-grey);">
+        <div class="container">
+            <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 50px; border-radius: 16px; text-align: center;">
+                <h2>Don't Miss Our Deals</h2>
+                <p style="color: #d0d0d0; margin-top: 10px;">Subscribe to get notifications about new products and exclusive offers</p>
+                <form class="newsletter-form" style="max-width: 400px; margin: 25px auto;" onsubmit="handleNewsletterShop(event)">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About UrbanFlex Wear</h4>
+                    <p>Your go-to store for premium sweatpants and sweat shorts in Kenya. We deliver quality, style, and comfort.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Support</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+254740388717">📞 0740 388 717</a></p>
+                    <p><a href="https://wa.me/254740388717">💬 WhatsApp</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 UrbanFlex Wear. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/254740388717?text=Hi UrbanFlex Wear!" class="floating-btn floating-btn-whatsapp" title="Chat on WhatsApp">💬</a>
+        <a href="tel:+254740388717" class="floating-btn floating-btn-call" title="Call Us">📞</a>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/shop.js"></script>
+</body>
+</html>

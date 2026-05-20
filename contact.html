@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | UrbanFlex Wear Kenya</title>
+    <meta name="description" content="Get in touch with UrbanFlex Wear. Contact us via phone, WhatsApp, or email for support and inquiries.">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="navbar">
+            <a href="index.html" class="logo">Urban<span>Flex</span> Wear</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="search" placeholder="Search products..." aria-label="Search products">
+            </div>
+            
+            <div class="nav-icons">
+                <div class="nav-icon cart-icon" title="Shopping Cart">
+                    🛒
+                    <span class="nav-badge" style="display: none;">0</span>
+                </div>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section style="background-color: var(--light-grey); padding: 40px 0; text-align: center;">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p style="margin-top: 10px; color: var(--medium-grey);">We're here to help! Contact us anytime</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                <!-- Contact Info -->
+                <div>
+                    <h2>Contact Information</h2>
+                    <p style="margin-bottom: 30px; color: var(--medium-grey);">Reach out to us through any of these channels. We respond quickly to all inquiries.</p>
+
+                    <div style="background-color: var(--light-grey); padding: 25px; border-radius: 12px; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">📞 Phone</h3>
+                        <p><a href="tel:+254740388717" style="font-weight: 600; font-size: 1.1rem;">+254 740 388 717</a></p>
+                        <p style="color: var(--medium-grey); font-size: 0.9rem;">Available: Mon-Sun, 8:00 AM - 8:00 PM EAT</p>
+                    </div>
+
+                    <div style="background-color: var(--light-grey); padding: 25px; border-radius: 12px; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">💬 WhatsApp</h3>
+                        <p><a href="https://wa.me/254740388717" style="font-weight: 600; font-size: 1.1rem;">+254 740 388 717</a></p>
+                        <p style="color: var(--medium-grey); font-size: 0.9rem;">Chat with us instantly. Usually responds within 5 minutes.</p>
+                    </div>
+
+                    <div style="background-color: var(--light-grey); padding: 25px; border-radius: 12px; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">📧 Email</h3>
+                        <p><a href="mailto:info@urbanflexwear.com" style="font-weight: 600; font-size: 1.1rem;">info@urbanflexwear.com</a></p>
+                        <p style="color: var(--medium-grey); font-size: 0.9rem;">Respond within 24 hours</p>
+                    </div>
+
+                    <div style="background-color: var(--light-grey); padding: 25px; border-radius: 12px;">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">📍 Location</h3>
+                        <p style="font-weight: 600;">Dagoreti Market / Ndunyu, Nairobi</p>
+                        <p style="color: var(--medium-grey); font-size: 0.9rem;">Pick up your order in person or shop in our store</p>
+                        <p style="color: var(--medium-grey); font-size: 0.9rem;">Serving all of Kenya with fast delivery</p>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div style="margin-top: 30px;">
+                        <h3 style="margin-bottom: 15px;">Quick Actions</h3>
+                        <a href="https://wa.me/254740388717?text=Hi UrbanFlex Wear! I have a question about your products." class="btn btn-primary btn-large" style="width: 100%; margin-bottom: 10px;">💬 Message on WhatsApp</a>
+                        <a href="tel:+254740388717" class="btn btn-secondary btn-large" style="width: 100%; margin-bottom: 10px;">📞 Call Now</a>
+                                        </div>
+
+                                        <!-- Owner Section -->
+                                        <div style="margin-top: 30px; text-align: center; background-color: var(--light-grey); padding: 25px; border-radius: 12px;">
+                                            <h3 style="margin-bottom: 15px;">Meet Our Owner</h3>
+                                            <img src="assets/images/owner.jpg" alt="UrbanFlex Wear Owner" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                                            <p style="font-weight: 600;">UrbanFlex Wear Team</p>
+                                            <p style="color: var(--medium-grey); font-size: 0.9rem;">Dedicated to bringing you premium quality sweatwear</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <h2>Send us a Message</h2>
+                    <p style="margin-bottom: 30px; color: var(--medium-grey);">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+                    <form onsubmit="handleContactForm(event)" style="background-color: var(--light-grey); padding: 30px; border-radius: 12px;">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" name="phone" placeholder="0740388717">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Subject *</label>
+                            <select name="subject" required>
+                                <option value="">Select subject...</option>
+                                <option value="product-inquiry">Product Inquiry</option>
+                                <option value="order-tracking">Order Tracking</option>
+                                <option value="delivery-issue">Delivery Issue</option>
+                                <option value="return-refund">Return/Refund</option>
+                                <option value="partnership">Business Partnership</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message *</label>
+                            <textarea name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; cursor: pointer;">
+                                <input type="checkbox" name="agree" required>
+                                <span style="margin-left: 8px;">I agree to be contacted regarding my inquiry</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Send Message</button>
+                        <p style="text-align: center; margin-top: 15px; font-size: 0.875rem; color: var(--medium-grey);">
+                            We'll respond via email or phone within 24 hours
+                        </p>
+                    </form>
+
+                    <!-- Testimonials -->
+                    <div style="margin-top: 30px;">
+                        <h3 style="margin-bottom: 15px;">Customer Support Hours</h3>
+                        <table style="width: 100%; font-size: 0.9rem;">
+                            <tr>
+                                <td style="padding: 8px;">Monday - Friday</td>
+                                <td style="padding: 8px; text-align: right;">8:00 AM - 6:00 PM</td>
+                            </tr>
+                            <tr style="background-color: var(--light-grey);">
+                                <td style="padding: 8px;">Saturday</td>
+                                <td style="padding: 8px; text-align: right;">9:00 AM - 5:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px;">Sunday</td>
+                                <td style="padding: 8px; text-align: right;">10:00 AM - 4:00 PM</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background-color: var(--light-grey);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background-color: var(--white); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                    <h3 style="font-size: 1rem; margin-bottom: 10px;">What are your delivery timeframes?</h3>
+                    <p style="color: var(--medium-grey);">We offer same-day delivery in Nairobi CBD and next-day delivery to other Nairobi areas. Delivery to other regions takes 2-3 days.</p>
+                </div>
+
+                <div style="background-color: var(--white); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                    <h3 style="font-size: 1rem; margin-bottom: 10px;">Do you accept returns?</h3>
+                    <p style="color: var(--medium-grey);">Yes! We accept returns within 7 days if the item is unused and in original condition. Contact us for a return authorization.</p>
+                </div>
+
+                <div style="background-color: var(--white); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                    <h3 style="font-size: 1rem; margin-bottom: 10px;">How do I track my order?</h3>
+                    <p style="color: var(--medium-grey);">You'll receive a tracking link via WhatsApp or SMS after your order is placed. You can track your delivery in real-time.</p>
+                </div>
+
+                <div style="background-color: var(--white); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                    <h3 style="font-size: 1rem; margin-bottom: 10px;">What payment methods do you accept?</h3>
+                    <p style="color: var(--medium-grey);">We currently accept M-Pesa payments. Simply send payment to 254740388717 through your phone's M-Pesa menu.</p>
+                </div>
+
+                <div style="background-color: var(--white); padding: 20px; border-radius: 8px;">
+                    <h3 style="font-size: 1rem; margin-bottom: 10px;">What's your size policy?</h3>
+                    <p style="color: var(--medium-grey);">We offer S, M, L, and XL sizes. Check our size guide on product pages for accurate measurements before ordering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About UrbanFlex Wear</h4>
+                    <p>Premium sweatpants and sweat shorts in Kenya with excellent customer support.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+254740388717">📞 0740 388 717</a></p>
+                    <p><a href="https://wa.me/254740388717">💬 WhatsApp</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 UrbanFlex Wear. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/254740388717?text=Hi UrbanFlex Wear!" class="floating-btn floating-btn-whatsapp">💬</a>
+        <a href="tel:+254740388717" class="floating-btn floating-btn-call">📞</a>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        function handleContactForm(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const message = `📧 *New Contact Form Submission*\n\n*Name:* ${formData.get('name')}\n*Email:* ${formData.get('email')}\n*Phone:* ${formData.get('phone')}\n*Subject:* ${formData.get('subject')}\n*Message:* ${formData.get('message')}`;
+            
+            // Save to localStorage
+            const contacts = JSON.parse(localStorage.getItem('contacts') || '[]');
+            contacts.push({
+                timestamp: new Date().toISOString(),
+                ...Object.fromEntries(formData)
+            });
+            localStorage.setItem('contacts', JSON.stringify(contacts));
+
+            UrbanFlex.showNotification('Message sent! We\'ll get back to you soon.', 'success');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

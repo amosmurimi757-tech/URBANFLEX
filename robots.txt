@@ -1,0 +1,33 @@
+# robots.txt for UrbanFlex Wear
+# https://urbanflexwear.com/robots.txt
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /shop.html
+Allow: /cart.html
+Allow: /checkout.html
+Allow: /contact.html
+Allow: /assets/
+
+# Disallow admin and sensitive pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /search?
+
+# Allow search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://urbanflexwear.com/sitemap.xml
+
+# Cache settings
+Cache-Control: public, max-age=604800

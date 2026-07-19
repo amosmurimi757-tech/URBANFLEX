@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="UrbanFlex Wear | Premium Sweatpants & Shorts in Kenya">
     <meta property="og:description" content="Shop affordable sweatpants and sweat shorts in Kenya with fast Nairobi delivery.">
-    <meta property="og:image" content="assets/images/sweats2.jpg">
+    <meta property="og:image" content="assets/images/sweati5.jpeg">
     <meta property="og:url" content="https://urbanflexwear.com">
     
     <!-- Twitter Card -->
@@ -124,6 +124,16 @@
                 <h2>New Arrivals</h2>
             </div>
             <div id="new-arrivals" class="grid grid-4"></div>
+        </div>
+    </section>
+
+    <!-- Hoodies Section -->
+    <section class="section" style="background-color: var(--light-grey);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Premium Hoodies</h2>
+            </div>
+            <div id="hoodies" class="grid grid-4"></div>
         </div>
     </section>
 
@@ -303,6 +313,12 @@
                 ...UrbanFlex.products.shorts.slice(6, 8)
             ];
             UrbanFlex.displayProducts(newArrivals, 'new-arrivals');
+
+            // Hoodies (if any)
+            const hoodies = UrbanFlex.products.hoodies.slice(0, 4);
+            if (hoodies && hoodies.length > 0) {
+                UrbanFlex.displayProducts(hoodies, 'hoodies');
+            }
         });
 
         function handleNewsletter(e) {

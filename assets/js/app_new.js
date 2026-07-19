@@ -28,26 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ====================================
 
 function loadProducts() {
-  // Load sweatpants
-  for (let i = 1; i <= 17; i++) {
-    const imagePath = `assets/images/sweats${i}.jpg`;
-    products.sweatpants.push({
-      id: `sweat-${i}`,
-      name: `Urban Sweatpants ${String.fromCharCode(64 + ((i - 1) % 26) + 1)}`,
-      category: 'Sweatpants',
-      price: prices[Math.floor(Math.random() * prices.length)],
-      originalPrice: prices[Math.floor(Math.random() * prices.length)] + 50,
-      image: imagePath,
-      description: `Premium comfort sweatpants with modern streetwear design. Perfect for casual wear, relaxation, and everyday style.`,
-      sizes: sizes,
-      inStock: Math.random() > 0.2,
-      discount: Math.random() > 0.7 ? Math.floor(Math.random() * 30) + 10 : 0,
-      rating: Math.floor(Math.random() * 2) + 4,
-      reviews: Math.floor(Math.random() * 100) + 20
-    });
-  }
-  
-  // Load sweati series (new sweatpants images)
+  // Load new sweatpants (sweati1-12)
   for (let i = 1; i <= 12; i++) {
     const imagePath = `assets/images/sweati${i}.jpeg`;
     products.sweatpants.push({
@@ -66,10 +47,26 @@ function loadProducts() {
     });
   }
 
-  // Load shorts - dynamically detect available images
-  loadDynamicShorts();
+  // Load new shorts (1-5)
+  for (let i = 1; i <= 5; i++) {
+    const imagePath = `assets/images/shorts${i}.jpeg`;
+    products.shorts.push({
+      id: `short-${i}`,
+      name: `Urban Shorts ${String.fromCharCode(64 + ((i - 1) % 26) + 1)}`,
+      category: 'Sweat Shorts',
+      price: 299,
+      originalPrice: 349,
+      image: imagePath,
+      description: `Comfortable sweat shorts with premium fabric. Great for workouts, casual outings, and warm weather.`,
+      sizes: sizes.slice(0, 3),
+      inStock: Math.random() > 0.15,
+      discount: Math.random() > 0.8 ? Math.floor(Math.random() * 25) + 5 : 0,
+      rating: Math.floor(Math.random() * 2) + 4,
+      reviews: Math.floor(Math.random() * 80) + 15
+    });
+  }
 
-  // Load hoodies (attempt up to 3 images)
+  // Load hoodies (1-3) - priced at 359
   for (let i = 1; i <= 3; i++) {
     const imagePath = `assets/images/hoodie${i}.jpeg`;
     products.hoodies.push({
@@ -79,48 +76,13 @@ function loadProducts() {
       price: 359,
       originalPrice: 429,
       image: imagePath,
-      description: `Cozy premium hoodie with modern streetwear cut. Great for cooler days and layering.`,
+      description: `Stylish and comfortable hoodie perfect for layering. Premium fabric with modern design for everyday wear.`,
       sizes: sizes,
       inStock: Math.random() > 0.2,
-      discount: Math.random() > 0.7 ? Math.floor(Math.random() * 20) + 5 : 0,
+      discount: Math.random() > 0.7 ? Math.floor(Math.random() * 30) + 10 : 0,
       rating: Math.floor(Math.random() * 2) + 4,
-      reviews: Math.floor(Math.random() * 60) + 10
+      reviews: Math.floor(Math.random() * 100) + 20
     });
-  }
-}
-
-function loadDynamicShorts() {
-  // Try to load shorts until we get a 404
-  let i = 1;
-  let loadedCount = 0;
-  
-  function tryLoadShort(index) {
-    const imagePath = `assets/images/shorts${index}.jpeg`;
-    
-    // Add the product anyway (in real production, you'd check if file exists)
-    // For static sites, we'll load up to a reasonable number
-    if (index <= 5) {
-      products.shorts.push({
-        id: `short-${index}`,
-        name: `Urban Shorts ${String.fromCharCode(64 + ((index - 1) % 26) + 1)}`,
-        category: 'Sweat Shorts',
-        price: 299,
-        originalPrice: 349,
-        image: imagePath,
-        description: `Comfortable sweat shorts with premium fabric. Great for workouts, casual outings, and warm weather.`,
-        sizes: sizes.slice(0, 3),
-        inStock: Math.random() > 0.15,
-        discount: Math.random() > 0.8 ? Math.floor(Math.random() * 25) + 5 : 0,
-        rating: Math.floor(Math.random() * 2) + 4,
-        reviews: Math.floor(Math.random() * 80) + 15
-      });
-      i++;
-    }
-  }
-  
-  // Load shorts
-  for (let j = 1; j <= 5; j++) {
-    tryLoadShort(j);
   }
 }
 
@@ -185,7 +147,6 @@ function setupMobileMenu() {
   
   if (!navLinks) return;
 
-  // Create mobile menu if it doesn't exist
   if (!navLinks.classList.contains('mobile-menu')) {
     navLinks.classList.add('mobile-menu');
   }
@@ -196,13 +157,11 @@ function setupMobileMenu() {
 // ====================================
 
 function setupEventListeners() {
-  // Search functionality
   const searchInput = document.querySelector('.search-bar input');
   if (searchInput) {
     searchInput.addEventListener('input', handleSearch);
   }
 
-  // Cart icon
   const cartIcon = document.querySelector('.cart-icon');
   if (cartIcon) {
     cartIcon.addEventListener('click', () => {
@@ -282,9 +241,9 @@ function findProduct(productId) {
 function displayProducts(productList, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
+
   container.innerHTML = productList.map(product => createProductCard(product)).join('');
 
-  // Add event listeners to 'Add Cart' buttons
   container.querySelectorAll('.btn-add-cart').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -295,7 +254,6 @@ function displayProducts(productList, containerId) {
     });
   });
 
-  // Add event listeners to 'Buy Now' buttons
   container.querySelectorAll('.btn-buy-now').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -310,13 +268,12 @@ function displayProducts(productList, containerId) {
 
 function createProductCard(product) {
   const discountPercent = product.discount > 0 ? `${product.discount}% OFF` : '';
-  const badgeClass = product.discount > 0 ? 'discount' : 'in-stock';
   const stars = '⭐'.repeat(product.rating) + '☆'.repeat(5 - product.rating);
 
   return `
     <div class="product-card">
       <div class="product-image-container">
-        <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect width=\'100%\' height=\'100%\' fill=\'%23e9e9e9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23666\' font-size=\'20\'>Image not available</text></svg>'">
+        <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
         ${product.discount > 0 ? `<div class="product-badge discount">${discountPercent}</div>` : '<div class="product-badge in-stock">IN STOCK</div>'}
       </div>
       <div class="product-info">
@@ -359,7 +316,6 @@ function handleSearch(e) {
     product.description.toLowerCase().includes(searchTerm)
   );
 
-  // Store results and redirect to shop page with filters
   sessionStorage.setItem('searchResults', JSON.stringify(results));
   if (searchTerm.length > 0) {
     window.location.href = `shop.html?search=${encodeURIComponent(searchTerm)}`;
@@ -408,7 +364,6 @@ function calculateTotal(cart) {
 }
 
 function calculateDeliveryFee(distance = 5) {
-  // Nairobi delivery zones
   if (distance <= 5) return 200;
   if (distance <= 10) return 300;
   if (distance <= 20) return 400;
